@@ -1,6 +1,6 @@
-require_relative "../parser"
+require_relative "../lib/parser"
 
-describe Parser do
+RSpec.describe Parser do
   subject(:parser) { described_class.new(interactors_path, file_path) }
 
   let(:interactors_path) { "#{Dir.pwd}/spec/interactors/" }

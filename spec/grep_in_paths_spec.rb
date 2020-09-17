@@ -1,6 +1,6 @@
-require_relative "../grep_in_paths"
+require_relative "../lib/grep_in_paths"
 
-describe GrepInPaths do
+RSpec.describe GrepInPaths do
   let(:file_paths) do
     [
       "#{Dir.pwd}/spec/interactors/calculate_parking_cost.rb",

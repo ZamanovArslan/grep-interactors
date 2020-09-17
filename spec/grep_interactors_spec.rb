@@ -1,6 +1,6 @@
-require_relative "../app"
+require_relative "../lib/grep_interactors"
 
-describe App do
+RSpec.describe GrepInteractors do
   let(:interactors_path) { "#{Dir.pwd}/spec/interactors/" }
   let(:file_path) { "#{Dir.pwd}/spec/interactors/some_interactor.rb" }
   let(:query) { "test_name" }
