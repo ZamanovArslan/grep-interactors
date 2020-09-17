@@ -3,6 +3,7 @@ Gem::Specification.new do |spec|
   spec.version       = "0.1.0"
   spec.authors       = ["ArslanZamanov"]
   spec.email         = ["arslan.zamanov@flatstack.com"]
+  spec.executables << 'grep'
 
   spec.summary       = "Recursive Grep keyword in called interactors inside requested interactor"
   spec.description   = "WIP"
