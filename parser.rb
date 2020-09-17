@@ -26,9 +26,12 @@ class Parser
   end
 
   def parse_interactors(file_path)
-    File.read(file_path).scan(/[A-Z][a-z]*[::[A-Z][a-z]*]*/).filter_map do |constant|
+    interactors = File.read(file_path).scan(/[A-Z][a-z]*[::[A-Z][a-z]*]*/).filter_map do |constant|
       get_full_class_name(constant, file_path)
-    end.reject { |class_name| class_name == get_class_name_by_path(file_path) }
+    end
+    current_class = get_class_name_by_path(file_path)
+
+    interactors - [current_class]
   end
 
   def get_full_class_name(constant, file_path)
@@ -36,6 +39,7 @@ class Parser
 
     current_module = get_class_name_by_path(file_path).split("::")[0..-2].join("::")
     full_class_name = "#{current_module}::#{constant}"
+
     full_class_name if Pathname.new(get_file_path_by_class(full_class_name)).exist?
   end
 

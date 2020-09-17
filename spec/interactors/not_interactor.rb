@@ -1,1 +1,3 @@
-for_fun
+def for_fun
+
+end
