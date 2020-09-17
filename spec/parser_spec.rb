@@ -28,7 +28,7 @@ describe Parser do
     end
 
     context "when class in a module" do
-      let(:file_path) { "/home/ars/Projects/organizer-searcher/spec/interactors/parking_costs/calculate_suitable_rate_amount.rb" }
+      let(:file_path) { "#{Dir.pwd}/spec/interactors/parking_costs/calculate_suitable_rate_amount.rb" }
 
       it "adds module name to classname" do
         expect(parser.parse_interactors(file_path)).to match_array(
@@ -44,8 +44,8 @@ describe Parser do
     it "returns file path by class" do
       expect(parser.parse_files_paths(classes)).to match_array(
         [
-          "/home/ars/Projects/organizer-searcher/spec/interactors/some_interactor.rb",
-          "/home/ars/Projects/organizer-searcher/spec/interactors/calculate_parking_cost.rb"
+          "#{Dir.pwd}/spec/interactors/some_interactor.rb",
+          "#{Dir.pwd}/spec/interactors/calculate_parking_cost.rb"
         ]
       )
     end
@@ -54,7 +54,7 @@ describe Parser do
   context "#get_full_class_name" do
     let(:get_full_class_name) {  }
     let(:class_name) { "Discounts::PrepareParams" }
-    let(:file_path) { "/home/ars/Projects/organizer-searcher/spec/interactors/parking_costs/calculate_suitable_rate_amount.rb" }
+    let(:file_path) { "#{Dir.pwd}/spec/interactors/parking_costs/calculate_suitable_rate_amount.rb" }
 
     it "returns full class name" do
       expect(parser.get_full_class_name(class_name, file_path)).to eq("ParkingCosts::Discounts::PrepareParams")
