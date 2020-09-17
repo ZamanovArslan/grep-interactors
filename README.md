@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/grep-interactors.svg)](https://badge.fury.io/rb/grep-interactors)
+
 # Grep::Interactors
 
 Gem, which helps realize grep through organized Interactors.
