@@ -3,5 +3,7 @@ module ParkingCosts
     include Interactor
 
     test_name
+
+    test_name
   end
 end

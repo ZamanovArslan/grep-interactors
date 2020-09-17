@@ -1,4 +1,10 @@
 require_relative "grep_in_paths"
+require_relative "parser"
 
-file_paths = Parser.new(ARGV[1], ARGV[2])
-GrepInPaths.call(ARGV[3], file_paths)
+class App
+  def self.call(interactors_path, file_path, query)
+    file_paths = Parser.new(interactors_path, file_path).file_paths
+
+    GrepInPaths.call(query, file_paths)
+  end
+end
