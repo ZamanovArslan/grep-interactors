@@ -1,6 +1,6 @@
-require "interactor"
 require "active_support"
 require "byebug"
+require "pathname"
 
 class Parser
   attr_reader :interactors_path, :file_path
@@ -8,8 +8,6 @@ class Parser
   def initialize(interactors_path, file_path)
     @interactors_path = interactors_path
     @file_path = file_path
-
-    require_all interactors_path
   end
 
   def file_paths
@@ -20,7 +18,7 @@ class Parser
     return [] if file_paths.empty?
 
     new_file_paths = parse_files_paths parse_interactors file_paths[0]
-    new_file_paths + recursive_parse_file_paths(new_file_paths - file_paths)
+    new_file_paths + recursive_parse_file_paths(file_paths[1..-1]) + recursive_parse_file_paths(new_file_paths)
   end
 
   def parse_files_paths(class_names)
@@ -47,12 +45,5 @@ class Parser
 
   def get_file_path_by_class(class_name)
     "#{interactors_path}#{ActiveSupport::Inflector.underscore(class_name)}.rb"
-  end
-
-  def require_all(path)
-    Dir[File.join(path, "**/*.rb")].each do |f|
-      require(f)
-    rescue NameError => e
-    end
   end
 end

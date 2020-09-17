@@ -1,1 +1,1 @@
-Aasdad::asd
+for_fun

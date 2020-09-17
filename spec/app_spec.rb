@@ -8,10 +8,10 @@ describe App do
 
   it ".call" do
     expect(described_class.call(interactors_path, file_path, query)).to match_array([
-      "/home/ars/Projects/organizer-searcher/spec/interactors/calculate_parking_cost.rb: 7",
-      "/home/ars/Projects/organizer-searcher/spec/interactors/some_interactor.rb: 6",
-      "/home/ars/Projects/organizer-searcher/spec/interactors/parking_costs/prepare_params.rb: 5",
-      "/home/ars/Projects/organizer-searcher/spec/interactors/parking_costs/discounts/prepare_params.rb: 4",
+      "/home/ars/Projects/organizer-searcher/spec/interactors/calculate_parking_cost.rb:7",
+      "/home/ars/Projects/organizer-searcher/spec/interactors/parking_costs/prepare_params.rb:5",
+      "/home/ars/Projects/organizer-searcher/spec/interactors/parking_costs/prepare_params.rb:7",
+      "/home/ars/Projects/organizer-searcher/spec/interactors/parking_costs/discounts/prepare_params.rb:4",
     ])
   end
 end
