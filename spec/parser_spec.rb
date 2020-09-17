@@ -4,17 +4,17 @@ require_relative "../parser"
 describe Parser do
   subject(:parser) { described_class.new(interactors_path, file_path) }
 
-  let(:interactors_path) { "/home/ars/Projects/organizer-searcher/spec/interactors/" }
-  let(:file_path) { "/home/ars/Projects/organizer-searcher/spec/interactors/some_interactor.rb" }
+  let(:interactors_path) { "#{Dir.pwd}/spec/interactors/" }
+  let(:file_path) { "#{Dir.pwd}/spec/interactors/some_interactor.rb" }
 
   context "#file_paths" do
     it "returns all file paths" do
       expect(parser.file_paths).to match_array(
         [
-          "/home/ars/Projects/organizer-searcher/spec/interactors/calculate_parking_cost.rb",
-          "/home/ars/Projects/organizer-searcher/spec/interactors/parking_costs/prepare_params.rb",
-          "/home/ars/Projects/organizer-searcher/spec/interactors/parking_costs/calculate_suitable_rate_amount.rb",
-          "/home/ars/Projects/organizer-searcher/spec/interactors/parking_costs/discounts/prepare_params.rb"
+          "#{Dir.pwd}/spec/interactors/calculate_parking_cost.rb",
+          "#{Dir.pwd}/spec/interactors/parking_costs/prepare_params.rb",
+          "#{Dir.pwd}/spec/interactors/parking_costs/calculate_suitable_rate_amount.rb",
+          "#{Dir.pwd}/spec/interactors/parking_costs/discounts/prepare_params.rb"
         ]
       )
     end
