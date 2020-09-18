@@ -30,7 +30,19 @@ $ grep-interactors interactors_path file_path keyword
 ```
 eg
 ```bash
-$ grep-interactors /home/stanislav_lemm/Projects/solaris/app/interactors/ /home/stanislav_lemm/Projects/solaris/app/interactors/agreements/create.rb agreement
+$ grep-interactors /home/stanislav_lemm/Projects/solaris/app/interactors/ /home/stanislav_lemm/Projects/solaris/app/interactors/agreements/create.rb user
+
+/home/stanislav_lemm/Projects/solaris/app/interactors/user/update_attributes.rb:6
+/home/stanislav_lemm/Projects/solaris/app/interactors/user/update_attributes.rb:9
+/home/stanislav_lemm/Projects/solaris/app/interactors/user/update_attributes.rb:12
+/home/stanislav_lemm/Projects/solaris/app/interactors/user/update_attributes.rb:18
+/home/stanislav_lemm/Projects/solaris/app/interactors/user/update_attributes.rb:30
+/home/stanislav_lemm/Projects/solaris/app/interactors/user/update_attributes.rb:34
+/home/stanislav_lemm/Projects/solaris/app/interactors/user/mind/refresh_value.rb:8
+/home/stanislav_lemm/Projects/solaris/app/interactors/user/mind/refresh_value.rb:9
+/home/stanislav_lemm/Projects/solaris/app/interactors/user/mind/refresh_value.rb:13
+/home/stanislav_lemm/Projects/solaris/app/interactors/user/mind/refresh_value.rb:35
+/home/stanislav_lemm/Projects/solaris/app/interactors/user/mind/refresh_value.rb:39
 ```
 _Works only with absolute path for now_
 
