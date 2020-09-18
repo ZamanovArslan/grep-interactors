@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "grep-interactors"
-  spec.version       = "0.1.1"
+  spec.version       = "0.1.2"
   spec.authors       = ["ArslanZamanov"]
   spec.email         = ["arslan.zamanov@flatstack.com"]
 
