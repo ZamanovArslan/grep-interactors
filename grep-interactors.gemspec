@@ -3,7 +3,6 @@ Gem::Specification.new do |spec|
   spec.version       = "0.1.1"
   spec.authors       = ["ArslanZamanov"]
   spec.email         = ["arslan.zamanov@flatstack.com"]
-  spec.executables << 'grep'
 
   spec.summary       = "Recursive Grep keyword in called interactors inside requested interactor"
   spec.description   = "WIP"
@@ -23,5 +22,6 @@ Gem::Specification.new do |spec|
   end
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+
   spec.require_paths = ["lib"]
 end

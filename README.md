@@ -26,11 +26,11 @@ Or install it yourself as:
 
 ## How to run
 ```bash
-$ grep-interactors terminal_app interactors_path file_path keyword
+$ grep-interactors interactors_path file_path keyword
 ```
 eg
 ```bash
-$ grep-interactors terminal_app.rb /home/stanislav_lemm/Projects/solaris/app/interactors/ /home/stanislav_lemm/Projects/solaris/app/interactors/agreements/create.rb agreement
+$ grep-interactors /home/stanislav_lemm/Projects/solaris/app/interactors/ /home/stanislav_lemm/Projects/solaris/app/interactors/agreements/create.rb agreement
 ```
 _Works only with absolute path for now_
 
