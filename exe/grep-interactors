@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'cli'
+require "grep_interactors"
 
-Cli.call(ARGV[0], ARGV[1], ARGV[2])
+GrepInteractors::Cli.call(ARGV)

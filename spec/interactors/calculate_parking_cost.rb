@@ -5,4 +5,5 @@ class CalculateParkingCost
     ParkingCosts::CalculateSuitableRateAmount
 
   test_name
+  reg_12
 end
