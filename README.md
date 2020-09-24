@@ -2,7 +2,7 @@
 
 # Grep::Interactors
 
-Gem, which helps realize grep through organized Interactors.
+Gem, which helps grep through organized Interactors.
 For example, if sent interactor as ARG contains calling of other interactors, it will try to find entries in them.
 More in spec/
 

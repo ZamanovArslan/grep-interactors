@@ -10,7 +10,8 @@ Gem::Specification.new do |spec|
   spec.email         = ["arslan.zamanov@flatstack.com"]
 
   spec.summary       = "Recursive Grep keyword in called interactors inside requested interactor"
-  spec.description   = "WIP"
+  spec.description   = "Gem, which helps realize grep through organized Interactors. For example, if sent interactor as
+ ARG contains calling of other interactors, it will try to find entries in them. More in specs"
   spec.homepage      = "https://github.com/ZamanovArslan/grep-interactors"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
