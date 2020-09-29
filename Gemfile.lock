@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    grep-interactors (0.1.4)
+    grep-interactors (0.1.5)
       activesupport
       dry-auto_inject
 

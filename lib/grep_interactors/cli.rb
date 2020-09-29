@@ -23,7 +23,7 @@ module GrepInteractors
         end
       end.parse!(args)
 
-      GrepInteractors.container.register("string_matcher", ::StringMatcher::Default) unless GrepInteractors.container.resolve("string_matcher")
+      GrepInteractors.container.register("string_matcher", ::StringMatcher::Default) unless GrepInteractors.container.key?("string_matcher")
 
       if args[0..3].empty?
         out << "Args should be defined\n"
