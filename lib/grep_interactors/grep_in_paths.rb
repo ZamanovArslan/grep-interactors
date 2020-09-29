@@ -1,5 +1,3 @@
-require 'byebug'
-
 module GrepInteractors
   class GrepInPaths
     include Import["string_matcher"]
@@ -8,9 +6,9 @@ module GrepInteractors
       file_paths.reduce([]) do |accum, file_path|
         lines = File.open(file_path).readlines
 
-        accum + lines.each_with_index.filter_map do |line, index|
+        accum + lines.each_with_index.map do |line, index|
           ("#{file_path}:#{index + 1}") if string_matcher.match?(line, query)
-        end
+        end.compact
       end.flatten
     end
   end

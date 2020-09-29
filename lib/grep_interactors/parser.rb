@@ -25,9 +25,9 @@ module GrepInteractors
     end
 
     def parse_interactors(file_path)
-      interactors = File.read(file_path).scan(/[A-Z][a-z]*[::[A-Z][a-z]*]*/).filter_map do |constant|
+      interactors = File.read(file_path).scan(/[A-Z][a-z]*[::[A-Z][a-z]*]*/).map do |constant|
         get_full_class_name(constant, file_path)
-      end
+      end.compact
       current_class = get_class_name_by_path(file_path)
 
       interactors - [current_class]
