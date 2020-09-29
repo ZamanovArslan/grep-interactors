@@ -6,6 +6,8 @@ Gem, which helps grep through organized Interactors.
 For example, if sent interactor as ARG contains calling of other interactors, it will try to find entries in them.
 More in spec/
 
+![Grep-Interactors](https://user-images.githubusercontent.com/32578180/94605038-34937000-02a1-11eb-8f17-ad33efa9c289.png)
+
 ## Installation
 
 Add this line to your application's Gemfile:
